@@ -8,6 +8,10 @@ import hotelImg from './img/hotel.jpg';
 import Styles from './styles/index.module.scss';
 
 const Card = ({ onCTAClick, ctaText, isPopupCard }) => {
+  const handleWishlistClick = () => {
+    alert('wishlist clicked!');
+  };
+
   return (
     <div
       className={classnames(Styles['card'], {
@@ -26,7 +30,10 @@ const Card = ({ onCTAClick, ctaText, isPopupCard }) => {
         >
           Nego
         </span>
-        <button className={Styles['card__wishlist-btn']}>
+        <button
+          className={Styles['card__wishlist-btn']}
+          onClick={handleWishlistClick}
+        >
           <Icon name="love" color="black" />
         </button>
       </div>

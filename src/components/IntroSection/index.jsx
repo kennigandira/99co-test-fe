@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import Modal from 'react-modal';
 
@@ -9,9 +10,7 @@ import Map from '../Map';
 import '../../styles/vendor/react-slick/style.scss';
 import Styles from './styles/index.module.scss';
 
-const NextArrow = (props) => {
-  const { className, style, onClick } = props;
-
+const NextArrow = ({ className, style, onClick }) => {
   return (
     <div
       className={className}
@@ -23,9 +22,7 @@ const NextArrow = (props) => {
   );
 };
 
-const PrevArrow = (props) => {
-  const { className, style, onClick } = props;
-
+const PrevArrow = ({ className, style, onClick }) => {
   return (
     <div
       className={className}
@@ -135,6 +132,18 @@ const IntroSection = () => {
       </div>
     </div>
   );
+};
+
+NextArrow.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
+  onClick: PropTypes.func,
+};
+
+PrevArrow.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
+  onClick: PropTypes.func,
 };
 
 export default IntroSection;

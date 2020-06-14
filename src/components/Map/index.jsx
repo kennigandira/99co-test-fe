@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Styles from './styles/index.module.scss';
 import mapImg from './img/map.png';
@@ -21,6 +22,10 @@ const Map = ({ onCTAClick }) => {
       </button>
     </div>
   );
+};
+
+Map.propTypes = {
+  onCTAClick: PropTypes.func,
 };
 
 export default Map;

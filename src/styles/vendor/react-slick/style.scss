@@ -1,0 +1,64 @@
+@import './slick.scss';
+@import './slick-theme.scss';
+@import '../../colors';
+
+.slick-slider {
+  height: 100%;
+
+  .link-banner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .dots {
+    background: $color-flight-oval;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+  }
+
+  .slick-active {
+    .dots {
+      background: $color-white;
+    }
+  }
+
+  .slick-next, .slick-prev {
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background: white;
+    z-index: 1;
+  }
+
+  .slick-next {
+    right: -30px;
+  }
+  
+  .slick-prev {
+    left: -30px;
+  }
+
+  .slick-dots {
+    bottom: 0;
+
+    li {
+      width: 10px;
+      height: 15px;
+      margin: 0 3px;
+    }
+  }
+
+  .slick-list, .slick-track, .slick-slide, .slick-slide > div, .slick-slide > div > div {
+    height: 100%;
+  }
+}

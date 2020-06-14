@@ -1,0 +1,9 @@
+@import './vendor/normalize.css';
+@import './fonts';
+@import './colors';
+@import './variable';
+
+* {
+  font-family: $font-family-main;
+  box-sizing: border-box;
+}
